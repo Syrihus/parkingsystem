@@ -43,6 +43,17 @@ public class FareCalculatorService {
 			ticket.setPrice(0);
 		}
 	}
+	
+	/**
+ 	 *-5% discount.
+	 * 
+	 * @author Arnaud
+	 * @param ticket
+	 */
+	public void calculateFareDiscount(Ticket ticket) {
+		double priceDiscount = (ticket.getPrice() - (ticket.getPrice() * 0.05));
+		ticket.setPrice(priceDiscount);
+	}
     
 	/**
 	 * Calculate fare, processing of price to around at 2 decimals
